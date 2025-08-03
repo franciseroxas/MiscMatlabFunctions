@@ -39,18 +39,6 @@ end
 
             %Pop from cell stack
             cellStack = cellStack(1:end-1);
-
-            %Empty cell case
-            if(startIdx > endIdx)
-                if(isempty(cellArray))
-                    cellArray = {};
-                else
-                    cellArray{cellRow, cellCol} = {};
-                end
-            else
-                cellArray = addToCellArray(stringInput, cellArray, startIdx, endIdx, cellRow, cellCol);
-
-            end
             
             stringStateMachine = "Cell Array End";
             
